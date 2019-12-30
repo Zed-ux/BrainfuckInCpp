@@ -2,5 +2,5 @@
 
 int main() {
     Commands comm{};
-    comm.parse(">");
+    comm.doCommand(">>");
 }

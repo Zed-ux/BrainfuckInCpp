@@ -3,14 +3,17 @@
 
 Commands::Commands() {};
 
-void Commands::parse(const std::string &str) {
-    for (auto it = str.begin(); it != str.end(); ++it) {
-        for (auto itList = list.begin(); itList != list.end(); ++itList) {
-            std::cout << str << std::endl;
-            if (itList->first == str) {
-                std::cout << itList->first << std::endl;
-            }
-        }
-
+void Commands::doCommand(const std::string& comm) {
+    for (auto it = comm.cbegin(); it != comm.cend(); ++it) {
+        //std::cout << *it << std::endl;
+        char comms = getCommand(*it);
     }
+}
+
+char Commands::getCommand(char const comm) {
+    for (auto it = list.begin(); it != list.end(); ++it) {
+        std::cout << "list" << it->first << it->second << std::endl;
+        return it->first;
+    }
+    return '\0';
 }

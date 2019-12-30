@@ -7,17 +7,19 @@
 class Commands {
     public:
         Commands();
-        void parse(const std::string &str);
+        void doCommand(const std::string& command);
     private:
-        std::map<std::string, std::string> list = { 
-            {">", "++p"},
-            {"<", "--p"},
-            {"+", "++*p"}, 
-            {"-", "--*p"},
-            {".", "putchar(*p)"},
-            {",", "*p = getchar()"},
-            {"[", "while (*p) {"},
-            {"]", "}"}
+       char getCommand(char const comm);
+    private:
+        std::map<char, std::string> list = { 
+            {'>', "++p"},
+            {'<', "--p"},
+            {'+', "++*p"}, 
+            {'-', "--*p"},
+            {'.', "putchar(*p)"},
+            {',', "*p = getchar()"},
+            {'[', "while (*p) {"},
+            {']', "}"}
         };
 };
 
