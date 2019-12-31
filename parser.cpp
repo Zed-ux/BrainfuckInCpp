@@ -8,8 +8,8 @@ void Parser::parse(std::string const& line) {
         lines.push_back(str);
     }
     for (auto it = lines.begin(); it != lines.end(); ++it) {
-            std::cout << *it << std::endl;
-        }
+        std::cout << *it << std::endl;
+    }
 }
 
 std::string Parser::getCommand(char command) {
