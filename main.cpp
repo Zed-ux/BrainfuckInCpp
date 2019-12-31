@@ -1,6 +1,8 @@
-#include "command.hpp"
+#include "parseFile.hpp"
+#include "parser.hpp"
 
 int main() {
-    Commands comm{};
-    comm.doCommand(">>");
+      ParseFile parser{};
+      std::vector<std::string> data{"[-[-[>]>+<<[<]>]]"};
+      parser.getParse(data);
 }
