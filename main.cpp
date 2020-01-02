@@ -3,6 +3,6 @@
 
 int main() {
       ParseFile parser{};
-      std::vector<std::string> data{"[-[-[>]>+<<[<]>]]"};
+      std::vector<std::string> data{"+[-->-[>>+>-----<<]<--<---]>-.>>>+.>>..+++[.>]<<<<.+++.------.<<-.>>>>+."};
       parser.getParse(data);
 }

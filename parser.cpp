@@ -1,5 +1,7 @@
 #include <iostream>
 #include <vector>
+#include <iostream>
+#include <fstream>
 #include "parser.hpp"
 
 void Parser::parse(std::string const& line) {
@@ -7,8 +9,11 @@ void Parser::parse(std::string const& line) {
         std::string str = getCommand(*it);
         lines.push_back(str);
     }
+    std::filebuf fb;
+    fb.open("test.txt", std::ios::out);
+    std::ostream os(&fb);
     for (auto it = lines.begin(); it != lines.end(); ++it) {
-        std::cout << *it << std::endl;
+        os << (*it);
     }
 }
 
